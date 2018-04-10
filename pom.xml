@@ -14,8 +14,8 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.1.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>1.4.0.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -34,6 +34,18 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<!-- JSTL for JSP -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+
+		<!-- Need this to compile JSP -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
