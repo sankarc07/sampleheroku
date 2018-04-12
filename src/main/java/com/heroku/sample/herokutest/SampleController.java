@@ -13,9 +13,21 @@ public class SampleController {
 	@Value("${welcome.message}")
 	private String message;
 
-	@RequestMapping(value = "/hai", method = RequestMethod.GET)
+	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String sayHai(Map<String, Object> model) {
 		model.put("message", message);
-		return "userdetails";
+		return "home";
+	}
+
+	@RequestMapping(value = "/hello", method = RequestMethod.GET)
+	public String sayHello(Map<String, Object> model) {
+//		model.put("message", message);
+		return "hello";
+	}
+
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String login(Map<String, Object> model) {
+//		model.put("message", message);
+		return "login";
 	}
 }

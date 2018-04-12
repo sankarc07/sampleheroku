@@ -11,6 +11,7 @@
 			<h1>Sample Heroku Example</h1>
 			<h2> ${message}</h2>
 		</div>
+        <p>Click <a href="<spring:url value='/hello' />">here</a> to see a greeting.</p>
 
 	</div>
 
