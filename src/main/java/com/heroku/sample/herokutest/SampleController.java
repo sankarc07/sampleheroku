@@ -24,6 +24,12 @@ public class SampleController {
 //		model.put("message", message);
 		return "hello";
 	}
+	
+	@RequestMapping(value = "/error", method = RequestMethod.GET)
+	public String errorPage(Map<String, Object> model) {
+//		model.put("message", message);
+		return "error";
+	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Map<String, Object> model) {

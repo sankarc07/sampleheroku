@@ -12,7 +12,9 @@ import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CustomAccessDeniedHandler implements AccessDeniedHandler {
     
 	private static Logger logger = LoggerFactory.getLogger(CustomAccessDeniedHandler.class);
@@ -23,7 +25,7 @@ public class CustomAccessDeniedHandler implements AccessDeniedHandler {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication != null) {
         	logger.info("Logged in user : "+authentication.getName()
-        	+"attempted to access the protected URL " + arg0.getRequestURI());
+        	+"	attempted to access the protected URL " + arg0.getRequestURI());
         	arg1.sendRedirect(arg0.getContextPath()+"/error");
         }
 	}
